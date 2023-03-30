@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Ilogic\IOrderLogic.cs" />
+    <Compile Remove="Ilogic\IRolLogic.cs" />
+    <Compile Remove="Ilogic\ISecurityLogic.cs" />
+    <Compile Remove="Ilogic\IUserLogic.cs" />
+    <Compile Remove="Ilogic\IUserSecurityLogic.cs" />
+    <Compile Remove="Logic\OrderLogic.cs" />
+    <Compile Remove="Logic\RolLogic.cs" />
+    <Compile Remove="Logic\SecurityLogic.cs" />
+    <Compile Remove="Logic\UserLogic.cs" />
+    <Compile Remove="Logic\UserSecurityLogic.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+</Project>

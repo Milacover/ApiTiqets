@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  
+   <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles></PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\AuthorizationItem.cs" />
+    <Compile Remove="Entities\FileIdentifierModel.cs" />
+    <Compile Remove="Entities\FileItem.cs" />
+    <Compile Remove="Entities\FileUploadModel.cs" />
+    <Compile Remove="Entities\FullProductInfoModel.cs" />
+    <Compile Remove="Entities\Order.cs" />
+    <Compile Remove="Entities\ProductData.cs" />
+    <Compile Remove="Entities\User.cs" />
+    <Compile Remove="Entities\UserRol.cs" />
+    <Compile Remove="Models\NewProductRequestB.cs" />
+    <Compile Remove="Relations\RolAuthorization.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Relations\" />
+  </ItemGroup>
+
+</Project>

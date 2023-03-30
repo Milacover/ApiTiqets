@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>disable</Nullable>
+	  <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
+   
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\FileController.cs" />
+    <Compile Remove="Controllers\OrderController.cs" />
+    <Compile Remove="Controllers\RolController.cs" />
+    <Compile Remove="Controllers\UserController.cs" />
+    <Compile Remove="IService\IOrderService.cs" />
+    <Compile Remove="IService\IRolService.cs" />
+    <Compile Remove="IService\IUserSecurityService.cs" />
+    <Compile Remove="IService\IUserService.cs" />
+    <Compile Remove="Middlewares\RequestAuthorizationMiddleware.cs" />
+    <Compile Remove="Service\OrderService.cs" />
+    <Compile Remove="Service\RolService.cs" />
+    <Compile Remove="Service\SecurityService.cs" />
+    <Compile Remove="Service\UserSecurityService.cs" />
+    <Compile Remove="Service\UserService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0" />
+     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Logic\Logic.csproj" />
+	  <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+
+</Project>
